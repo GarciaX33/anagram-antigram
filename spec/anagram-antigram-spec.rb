@@ -1,19 +1,15 @@
-require 'rspec'
-require './lib/anagram-antigram.rb'
+require('rspec')
+require('anagram-antigram')
 
-describe("String#is_a_word?") do
-  let(:word) { String.new }
-  it("returns false if word has no length") do
-    expect(word.is_a_word?("", "a")).to(eq(false))
-  end
-  it("returns true if has length") do
-    expect(word.is_a_word?("DRINK", "WINE")).to(eq(true))
-  end
-  it("returns true if has a vowel") do
-    expect(word.is_a_word?("EAT", "GLUE")).to(eq(true))
-  end
-  it("returns false if has no vowel") do
-    expect(word.is_a_word?("zzz", "zqj")).to(eq(false))
+describe('Words#palindromes') do
+  ex = Input.new()
+
+  it('inspects input to check if a palindrome') do
+    expect(ex.palindromes("Ana", "Anlo")).to(eq("first word is a palindrome"))
   end
 
-end
+  it('inspects to see if your second word is a palindrome') do
+    expect(ex.palindromes("AnLo", "Ana")).to(eq("second word is a palindrome"))
+  end
+  describe('Words#anagramsInput') do
+    ex = Input.new()
