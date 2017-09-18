@@ -24,3 +24,6 @@ describe('Words#palindromes') do
     it('inspects to see if two words are anagrams') do
     expect(ex.anagramsInput("eat", "tea")).to(eq("these words are anagrams"))
   end
+  it('inspects to see if two words are anagrams even if their case is different') do
+      expect(ex.anagramsInput("HeLlo", "oLlEh")).to(eq("these words are anagrams"))
+    end
