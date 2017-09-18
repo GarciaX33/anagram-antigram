@@ -13,9 +13,11 @@ describe('Words#palindromes') do
   end
   describe('Words#anagramsInput') do
     ex = Input.new()
-    
+
     it('inspects to see if either of the words are real') do
         expect(ex.anagramsInput("hello", "rd")).to(eq("you must use a real word!"))
       end
 
-      it('inspects multiples words in the input') do
+        it('inspects multiples words in the input') do
+      expect(ex.anagramsInput("race car", "car race")).to(eq("these words are anagrams"))
+    end
