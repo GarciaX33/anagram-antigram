@@ -15,21 +15,24 @@ describe('Words#palindromes') do
     ex = Input.new()
 
     it('inspects to see if either of the words are real') do
-        expect(ex.anagramsInput("hello", "rd")).to(eq("you must use a real word!"))
-      end
+      expect(ex.anagramsInput("hello", "rd")).to(eq("you must use a real word!"))
+    end
 
-        it('inspects multiples words in the input') do
+    it('inspects multiples words in the input') do
       expect(ex.anagramsInput("race car", "car race")).to(eq("these words are anagrams"))
     end
+
     it('inspects to see if two words are anagrams') do
-    expect(ex.anagramsInput("eat", "tea")).to(eq("these words are anagrams"))
-  end
-  it('inspects to see if two words are anagrams even if their case is different') do
+      expect(ex.anagramsInput("eat", "tea")).to(eq("these words are anagrams"))
+    end
+
+    it('inspects to see if two words are anagrams even if their case is different') do
       expect(ex.anagramsInput("HeLlo", "oLlEh")).to(eq("these words are anagrams"))
     end
-    it('inspects to see if the two words are antigrams') do
-    expect(ex.anagramsInput("hello", "cat")).to(eq("these words are antigrams"))
-  end
 
-end
+    it('inspects to see if the two words are antigrams') do
+      expect(ex.anagramsInput("hello", "cat")).to(eq("these words are antigrams"))
+    end
+
+  end
 end
